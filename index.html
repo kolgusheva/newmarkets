@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Capturing New Markets</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -18,6 +18,9 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
@@ -35,52 +38,54 @@
 </head>
 
 <body id="page-top">
-
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <header>
+    <header id="header-top">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Your Favorite Source of Free Bootstrap Themes</h1>
-                <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <p class="header-location">March, 23 | Hilton Hotel | Kyiv, Ukraine</p>
+                <h1>Capturing New Markets</h1>
+                </br>
+                <p>Kyiv Post business conference devoted to raising Ukraine's </br>export potential to Europe, Turkey and MENA</p>
+                <ul class="header-logos">
+                    <li>
+                        <p class="small-organizer"> Organized by </p>
+                        <img src="img/kyivpost-logo.png">
+                    </li>
+                    
+                    <li>
+                        <p class="small-organizer"> In partnership with </p>
+                        <img src="img/dentons.png">
+                    </li>
+                </ul>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Registration</a>
+                <i class="material-icons">expand_more</i>
             </div>
         </div>
     </header>
+
+<nav id="navbar-main" class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#header-top">Capturing New Markets</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Speakers</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#registration">Registration</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
 
     <section class="bg-primary" id="about">
         <div class="container">
@@ -277,6 +282,41 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+  
+    // Fixa navbar ao ultrapassa-lo
+    var navbar = $('#navbar-main'),
+            distance = navbar.offset().top,
+        $window = $(window);
+
+    $window.scroll(function() {
+        if ($window.scrollTop() >= distance) {
+            navbar.removeClass('navbar-fixed-top').addClass('navbar-fixed-top');
+            $("body").css("padding-top", "70px");
+        } else {
+            navbar.removeClass('navbar-fixed-top');
+            $("body").css("padding-top", "0px");
+        }
+    });
+});
+    </script>
+    <!-- smooth scrolling script -->
+<script>
+$(function () {
+
+$('a[href^="#"]').click(function(event) {
+var id = $(this).attr("href");
+var offset = 20;
+var target = $(id).offset().top - offset;
+
+$('html, body').animate({scrollTop:target}, 500);
+event.preventDefault();
+});
+
+});
+</script>
+<!-- end smooth scrolling script -->
 
 </body>
 
