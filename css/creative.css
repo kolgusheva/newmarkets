@@ -390,9 +390,8 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
     color: #fff;
-    background-color: #f05f40;
+    background-color: #FFC927;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -405,7 +404,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
     border-color: #ed431f;
-    color: #fff;
+    color: #212121;
     background-color: #ee4b28;
 }
 
@@ -1055,21 +1054,28 @@ body {
 
 /*Mobile*/
 
+
+
 @media (max-width: 480px) {
+    .article-list-basic li {
+        max-width: 38% !important;
+    }
 
 }
 
 @media (max-width: 767px) {
-
+    
+    .article-list-basic li {
+        max-width: 45% !important;
+    }
 }
-
 /* Tablet device */
 @media (max-width: 991px) and (min-width: 768px) {
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1920px) {
     .container {
-        width: 970px;
+        width: 1200px;
     }
 }
