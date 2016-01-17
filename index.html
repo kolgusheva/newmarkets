@@ -188,7 +188,7 @@
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="home">
                     <div class="container">
-                    <div class="row">
+                    <div class="row how-to-capture">
                         <div class="col-md-12">
                             <h3> How to capture alternative markets? </h3>
                             <p>Facearuntur aut volles imustio dolorpo rehendi gendae veriore pratiore nonsent et etur? Quibusam, volorem que moluptateni ide quo mo velestios sum quatio quas esed quatem iuntis alis archicto quat aut et molorum est, con numqui ulparum volorum seque et vel impor sanis ma volupta tenistrum, comnissum quia sunt exceataqui rem sitasitibus sequi volorum sedi inimagnat quis mil iumquodios explici.</p>
@@ -614,14 +614,15 @@
 <script>
 $(function () {
 
-$('a[href^="#"]').click(function(event) {
-var id = $(this).attr("href");
-var offset = 55;
-console.log( $(id).offset().top );
-var target = $(id).offset().top - offset;
 
-$('html, body').animate({scrollTop:target}, 500);
-event.preventDefault();
+$("#navbar-main").find('a').click(function(event) {
+    var id = $(this).attr("href");
+    var offset = 55;
+    console.log( $(id).offset().top );
+    var target = $(id).offset().top - offset;
+
+    $('html, body').animate({scrollTop:target}, 500);
+    event.preventDefault();
 });
 
 });

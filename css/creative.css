@@ -508,6 +508,16 @@ body {
     background-color: inherit !important;
 }
 
+.how-to-capture {
+    text-align: justify;
+    padding: 0;
+}
+
+.article-list-basic li:hover {
+    box-shadow: 2px 2px 10px -3px;
+    transition: all 0.5s ease;
+}
+
 /*Slider*/
 
 .bg-primary {
