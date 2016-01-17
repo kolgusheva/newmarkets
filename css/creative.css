@@ -453,17 +453,6 @@ fieldset[disabled] .btn-primary.active {
     padding: 15px 30px;
 }
 
-::-moz-selection {
-    text-shadow: none;
-    color: #fff;
-    background: #222;
-}
-
-::selection {
-    text-shadow: none;
-    color: #fff;
-    background: #222;
-}
 
 img::selection {
     color: #fff;
@@ -481,6 +470,7 @@ body {
 
 .header-logos {
     list-style-type: none;
+    padding:0;
 }
 
 .header-logos li{
@@ -512,12 +502,6 @@ body {
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
     color: #212121;
-}
-
-
-.active > a:focus{
-    background-color: inherit !important;
-    color: #212121; 
 }
 
 .navbar-inverse .navbar-nav>.active>a {
@@ -1084,10 +1068,39 @@ body {
     display: none;
 }
 
+.page-scroll {
+    border: none;
+    border-radius: 0;
+    background-color: #ed431f;
+    padding: 8px 30px;
+    font-weight: 400;
+}
+
+.page-scroll:hover {
+    color: white;
+}
+
+.load-more-arrow {
+    margin-top: 100px;
+}
+
+.load-more-arrow i {
+    font-size: 3em;
+}
+
+.nav > li > a {
+    padding: 15px 10px;
+}
+
+.lSPager a {
+    color: black;
+    background-color: black;
+    opacity: 1;
+}
+
+
 
 /*Mobile*/
-
-
 
 @media (max-width: 480px) {
     .article-list-basic li {
@@ -1110,6 +1123,23 @@ body {
         color: #fff;
     }
     
+    .navbar { /*Make it look like the .navbar-fixed-top one*/
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        padding-right: 0;
+        padding-left: 0;
+        max-height: 340px;
+        border-radius: 0;
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .load-more-arrow {
+        display: none;
+    }
+
 }
 
 @media (max-width: 767px) {
