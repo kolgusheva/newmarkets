@@ -64,7 +64,7 @@ p {
     color: rgba(255,255,255,.7);
 }
 
-section {
+.section-padding {
     padding: 70px 0;
 }
 
@@ -830,6 +830,7 @@ body {
     text-align: center;
     margin-top: 50px;
     color: #212121;
+    padding-left: inherit;
 }
 
 
@@ -1096,6 +1097,19 @@ body {
         width: 45%;
     }
 
+    .xs-hidden {
+        direction
+    }
+
+    .xs-no-padding {
+        padding-top: 0 !important;
+    }
+
+    div.alter-colors {
+        background-color: #FFC300 !important;
+        color: #fff;
+    }
+    
 }
 
 @media (max-width: 767px) {
@@ -1107,6 +1121,15 @@ body {
     .sponsors li {
         width: 45%;
     }
+
+     .xs-no-padding {
+        padding-top: 0 !important;
+        border: 1px;
+        border-color: red;
+        border-style: solid;
+        text-align: center;
+    }   
+
 }
 /* Tablet device */
 @media (max-width: 991px) and (min-width: 768px) {
